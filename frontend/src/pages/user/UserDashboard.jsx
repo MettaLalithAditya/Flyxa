@@ -15,17 +15,26 @@ function UserDashboard() {
 
   const userName = localStorage.getItem("userName");
 
+  // 🔥 CLEAN BEFORE SEND
+  const formatCity = (city) => city.trim().toLowerCase();
+
   const searchBuses = () => {
     if (!from || !to || !date) {
       alert("Please fill all fields");
       return;
     }
-    navigate(`/search?from=${from}&to=${to}&date=${date}`);
+
+    navigate(
+      `/search?from=${formatCity(from)}&to=${formatCity(to)}&date=${date}`
+    );
   };
 
   const handlePopularRoute = (fromCity, toCity) => {
     const today = new Date().toISOString().split("T")[0];
-    navigate(`/search?from=${fromCity}&to=${toCity}&date=${today}`);
+
+    navigate(
+      `/search?from=${formatCity(fromCity)}&to=${formatCity(toCity)}&date=${today}`
+    );
   };
 
   return (
@@ -33,7 +42,6 @@ function UserDashboard() {
       {/* HERO SECTION */}
       <div className="hero">
         <div className="hero-content">
-
           {userName && (
             <p className="welcome-text">
               Welcome, <strong>{userName}</strong> 👋
@@ -47,15 +55,14 @@ function UserDashboard() {
 
             {/* FROM */}
             <div className="input-group">
-             <input
-              type="text"
-              placeholder="From"
-              value={from}
-              onChange={(e) => setFrom(e.target.value)}
-              onFocus={() => setShowFromDropdown(true)}
-              onBlur={() => setTimeout(() => setShowFromDropdown(false), 200)}
-            />
-
+              <input
+                type="text"
+                placeholder="From"
+                value={from}
+                onChange={(e) => setFrom(e.target.value)}
+                onFocus={() => setShowFromDropdown(true)}
+                onBlur={() => setTimeout(() => setShowFromDropdown(false), 200)}
+              />
 
               {showFromDropdown && (
                 <div className="dropdown">
@@ -87,7 +94,6 @@ function UserDashboard() {
                 onFocus={() => setShowToDropdown(true)}
                 onBlur={() => setTimeout(() => setShowToDropdown(false), 200)}
               />
-
 
               {showToDropdown && (
                 <div className="dropdown">
