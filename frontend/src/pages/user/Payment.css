@@ -1,0 +1,74 @@
+.payment-page {
+  min-height: calc(100vh - 70px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f4f6f8;
+  padding: 20px;
+}
+
+.payment-card {
+  width: 100%;
+  max-width: 480px;
+  background: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+.payment-card h2 {
+  margin-bottom: 20px;
+  text-align: center;
+  color: #e53935;
+}
+
+.payment-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 12px;
+  font-size: 15px;
+}
+
+.payment-row span {
+  color: #555;
+}
+
+.payment-row strong {
+  color: #111;
+}
+
+.payment-total {
+  display: flex;
+  justify-content: space-between;
+  font-size: 18px;
+  margin: 20px 0;
+  font-weight: bold;
+}
+
+.pay-btn {
+  width: 100%;
+  background: #e53935;
+  color: #fff;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.pay-btn:hover {
+  background: #c62828;
+}
+
+/* 📱 Mobile */
+@media (max-width: 480px) {
+  .payment-card {
+    padding: 20px;
+  }
+
+  .payment-row,
+  .payment-total {
+    font-size: 14px;
+  }
+}

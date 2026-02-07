@@ -1,0 +1,46 @@
+.addbus-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.addbus-card {
+  background: white;
+  padding: 30px;
+  width: 700px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+.addbus-card h2 {
+  margin-bottom: 25px;
+}
+
+.addbus-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+}
+
+.addbus-grid input {
+  padding: 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+.addbus-card button {
+  margin-top: 25px;
+  width: 100%;
+  padding: 14px;
+  background: #d84e55;
+  border: none;
+  color: white;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.addbus-card button:hover {
+  opacity: 0.9;
+}

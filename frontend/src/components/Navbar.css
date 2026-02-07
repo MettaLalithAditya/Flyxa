@@ -1,0 +1,71 @@
+/* Navbar layout */
+.navbar {
+  background: #d84e55;
+  padding: 12px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+}
+
+/* LEFT AREA */
+.navbar h2 {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+/* ✅ BACK BUTTON (strong selector) */
+.navbar .back-btn {
+  background: #d84e55;
+  color: #fafafa;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.2s ease;
+}
+
+.navbar .back-btn:hover {
+  transform: translateY(-1px);
+  background: #ffecec;
+}
+
+/* PROFILE AREA */
+.profile {
+  position: relative;
+}
+
+.profile-btn {
+  background: rgba(255, 255, 255, 0.15);
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* DROPDOWN */
+.dropdown {
+  position: absolute;
+  right: 0;
+  top: 120%;
+  background: white;
+  color: black;
+  min-width: 150px;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+  overflow: hidden;
+}
+
+.dropdown div {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.dropdown div:hover {
+  background: #f3f3f3;
+}
+
+.logout {
+  color: red;
+}

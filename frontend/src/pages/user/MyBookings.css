@@ -1,0 +1,66 @@
+.my-bookings {
+  padding: 40px;
+}
+
+.my-bookings h2 {
+  margin-bottom: 20px;
+}
+
+.empty {
+  color: gray;
+  margin-top: 20px;
+}
+
+.booking-list {
+  display: grid;
+  gap: 15px;
+}
+
+.booking-card {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.08);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.booking-card h3 {
+  margin: 0;
+}
+
+.status {
+  margin-top: 8px;
+  font-weight: bold;
+}
+
+.status.booked {
+  color: green;
+}
+
+.status.cancelled {
+  color: red;
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+}
+
+.actions button {
+  border: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.view {
+  background: #e53935;
+  color: white;
+}
+
+.cancel {
+  background: black;
+  color: white;
+}

@@ -1,0 +1,139 @@
+/* Page wrapper */
+.revenue-page {
+  padding: 30px;
+  background: #f5f7fb;
+  min-height: calc(100vh - 70px);
+}
+
+/* Title */
+.revenue-page h1 {
+  font-size: 26px;
+  margin-bottom: 25px;
+}
+
+/* Card */
+.revenue-card {
+  background: white;
+  padding: 25px 30px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+  max-width: 350px;
+}
+
+/* Label */
+.revenue-card h3 {
+  margin: 0;
+  color: gray;
+  font-weight: 500;
+}
+
+/* Amount */
+.revenue-amount {
+  margin-top: 10px;
+  font-size: 32px;
+  font-weight: bold;
+  color: #d84e55;
+}
+
+.revenue-page {
+  padding: 30px;
+  background: #f5f7fb;
+  min-height: calc(100vh - 70px);
+}
+
+.revenue-page h2 {
+  margin-bottom: 20px;
+}
+
+/* TOTAL CARD */
+.revenue-card {
+  background: white;
+  padding: 20px 25px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+  max-width: 350px;
+  margin-bottom: 30px;
+}
+
+.revenue-card h3 {
+  margin: 0;
+  color: gray;
+  font-weight: 500;
+}
+
+.revenue-amount {
+  margin-top: 10px;
+  font-size: 30px;
+  font-weight: bold;
+  color: #d84e55;
+}
+
+/* USER TABLE */
+.user-title {
+  margin-bottom: 10px;
+}
+
+.user-table {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+  overflow: hidden;
+  max-width: 500px;
+}
+
+.table-header,
+.table-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 18px;
+}
+
+.table-header {
+  background: #d84e55;
+  color: white;
+  font-weight: 600;
+}
+
+.table-row:nth-child(even) {
+  background: #f9f9f9;
+}
+
+.filters {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.filters button {
+  background: #d84e55;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+}
+
+.chart {
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.table {
+  background: white;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 15px;
+  border-bottom: 1px solid #eee;
+}
+
+.refund {
+  font-size: 22px;
+  font-weight: bold;
+  color: red;
+}

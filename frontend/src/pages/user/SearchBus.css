@@ -1,0 +1,163 @@
+.search-container {
+  display: flex;
+  padding: 20px;
+  gap: 20px;
+  background: #f4f6f8;
+}
+
+/* LEFT FILTERS */
+.filters {
+  width: 250px;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.filters h3 {
+  margin-bottom: 15px;
+}
+
+.filters label {
+  display: block;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+/* BUS LIST */
+.bus-list {
+  flex: 1;
+}
+
+.bus-card {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+}
+
+.bus-left h3 {
+  margin: 0;
+}
+
+.bus-type {
+  font-size: 14px;
+  color: gray;
+}
+
+.rating {
+  background: #38b000;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.bus-middle {
+  text-align: center;
+}
+
+.bus-right {
+  text-align: right;
+}
+
+.bus-right h3 {
+  margin-bottom: 10px;
+}
+
+.bus-right button {
+  background: #d84e55;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.bus-right button:hover {
+  background: #b63c42;
+}
+
+.bus-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  padding: 20px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+}
+
+.bus-left {
+  width: 25%;
+}
+
+.bus-middle {
+  width: 45%;
+  text-align: center;
+}
+
+.bus-right {
+  width: 20%;
+  text-align: right;
+}
+
+.bus-name {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.rating {
+  background: #4caf50;
+  color: #fff;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 13px;
+}
+
+
+.modify-search {
+  margin-bottom: 20px;
+}
+
+.input-group {
+  position: relative;
+  max-width: 250px;
+}
+
+.dropdown {
+  position: absolute;
+  top: 110%;
+  left: 0;
+  width: 100%;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+  padding: 10px 0;
+  z-index: 1000;
+}
+
+.dropdown-title {
+  font-weight: 600;
+  padding: 8px 15px;
+  color: gray;
+  font-size: 14px;
+}
+
+.dropdown-item {
+  padding: 10px 15px;
+  cursor: pointer;
+}
+
+.dropdown-item:hover {
+  background: #f3f3f3;
+}
+
+.modify-search {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+}
