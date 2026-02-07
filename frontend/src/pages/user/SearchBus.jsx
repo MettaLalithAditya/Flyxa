@@ -14,12 +14,20 @@ function SearchBus() {
   const [buses, setBuses] = useState([]);
 
   useEffect(() => {
-    fetch(
-      `http://localhost:5000/api/buses/search?from=${from}&to=${to}`
-    )
-      .then((res) => res.json())
-      .then((data) => setBuses(data))
-      .catch((err) => console.error(err));
+    const fetchBuses = async () => {
+      try {
+        const res = await fetch(
+          `https://flyxa.onrender.com/api/buses/search?from=${from}&to=${to}`
+        );
+
+        const data = await res.json();
+        setBuses(data);
+      } catch (err) {
+        console.error("Error fetching buses:", err);
+      }
+    };
+
+    if (from && to) fetchBuses();
   }, [from, to]);
 
   return (
