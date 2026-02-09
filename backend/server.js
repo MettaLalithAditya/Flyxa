@@ -23,6 +23,7 @@ app.use("/api/buses", busRoutes);
 app.use("/api/bookings", bookingRoutes);
 app.use("/api/admin", adminRoutes);
 app.use("/api/payment", paymentRoutes);
+app.use("/api/buses", busRoutes);
 
 
 app.listen(5000, () => {

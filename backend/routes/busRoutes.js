@@ -3,10 +3,17 @@ const router = express.Router();
 
 const {
   searchBuses,
-  getAllBuses,   // ⭐ add this
+  getAllBuses,
+  deleteBus,
 } = require("../controllers/busController");
 
+// SEARCH
 router.get("/search", searchBuses);
-router.get("/", getAllBuses);   // ⭐ use directly
+
+// GET ALL
+router.get("/", getAllBuses);
+
+// DELETE
+router.delete("/buses/:id", deleteBus);
 
 module.exports = router;
