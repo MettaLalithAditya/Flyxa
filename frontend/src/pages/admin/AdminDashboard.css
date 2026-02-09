@@ -155,3 +155,17 @@
 .admin-table tr:hover {
   background: #fafafa;
 }
+
+
+.delete-btn {
+  background: #e53935;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.delete-btn:hover {
+  background: #c62828;
+}

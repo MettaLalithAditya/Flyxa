@@ -1,13 +1,40 @@
 import { useEffect, useState } from "react";
 import API from "../../services/api";
-import "./AdminDashboard.css"; // make sure this is imported
+import "./AdminDashboard.css";
 
 function ViewBuses() {
   const [buses, setBuses] = useState([]);
 
+  // FETCH
+  const fetchBuses = async () => {
+    try {
+      const res = await API.get("/buses");
+      setBuses(res.data);
+    } catch (err) {
+      console.error("Error fetching buses:", err);
+    }
+  };
+
   useEffect(() => {
-    API.get("/admin/buses").then((res) => setBuses(res.data));
+    fetchBuses();
   }, []);
+
+  // DELETE
+  const handleDelete = async (id) => {
+    const confirmDelete = window.confirm(
+      "Are you sure you want to delete this bus?"
+    );
+    if (!confirmDelete) return;
+
+    try {
+      await API.delete(`/buses/${id}`);
+      alert("Bus deleted successfully");
+      fetchBuses();
+    } catch (err) {
+      console.error(err);
+      alert("Delete failed");
+    }
+  };
 
   return (
     <div className="admin-page">
@@ -16,10 +43,16 @@ function ViewBuses() {
       <div className="bus-grid">
         {buses.map((bus) => (
           <div key={bus._id} className="bus-card">
-            <div className="bus-name">{bus.busName}</div>
-            <div className="bus-route">
-              {bus.from} → {bus.to}
+            <div>
+              <strong>{bus.busName}</strong>
+              <p>
+                {bus.from} → {bus.to}
+              </p>
             </div>
+
+            <button onClick={() => handleDelete(bus._id)}>
+              Delete
+            </button>
           </div>
         ))}
       </div>
